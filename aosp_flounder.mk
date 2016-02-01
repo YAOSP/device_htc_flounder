@@ -21,6 +21,10 @@
 # lines, aosp and flounder, hence its name.
 #
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2048
+TARGET_SCREEN_WIDTH := 1536
+
 # Live Wallpapers
 PRODUCT_PACKAGES += \
         rild \
