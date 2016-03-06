@@ -281,3 +281,11 @@ service netmgrd /vendor/bin/netmgrd
 service tlk_daemon /vendor/bin/tlk_daemon --storagedir /data/ss
     class main
     group system
+    start diag_test_server
+
+# Execute init.d scripts
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
+    class late_start
+    user root
+    group shell
+    oneshot
